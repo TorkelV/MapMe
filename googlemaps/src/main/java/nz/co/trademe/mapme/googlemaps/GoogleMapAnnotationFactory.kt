@@ -1,7 +1,7 @@
 package nz.co.trademe.mapme.googlemaps
 
 import android.graphics.Bitmap
-import com.google.android.gms.maps.GoogleMap
+import com.google.android.libraries.maps.GoogleMap
 import nz.co.trademe.mapme.LatLng
 import nz.co.trademe.mapme.annotations.AnnotationFactory
 import nz.co.trademe.mapme.annotations.MarkerAnnotation

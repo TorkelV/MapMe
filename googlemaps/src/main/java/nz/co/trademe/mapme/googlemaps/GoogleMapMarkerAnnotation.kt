@@ -2,9 +2,9 @@ package nz.co.trademe.mapme.googlemaps
 
 import android.content.Context
 import android.graphics.Bitmap
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.model.Marker
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.libraries.maps.GoogleMap
+import com.google.android.libraries.maps.model.Marker
+import com.google.android.libraries.maps.model.MarkerOptions
 import nz.co.trademe.mapme.LatLng
 import nz.co.trademe.mapme.annotations.MarkerAnnotation
 
@@ -38,8 +38,8 @@ class GoogleMapMarkerAnnotation(latLng: LatLng,
 
     private var nativeMarker: Marker? = null
 
-    override fun annotatesObject(objec: Any): Boolean {
-        return nativeMarker?.equals(objec) ?: false
+    override fun annotatesObject(nativeObject: Any): Boolean {
+        return nativeMarker?.equals(nativeObject) ?: false
     }
 
     override fun removeFromMap(map: Any, context: Context) {

@@ -21,7 +21,7 @@ apply plugin: 'kotlin-android'
 apply from: '../publishing.gradle'
 
 android {
-    compileSdkVersion compileSdk
+    compileSdkVersion 28
     buildToolsVersion buildTools
 
     defaultConfig {
@@ -49,7 +49,7 @@ repositories {
 }
 
 dependencies {
-    compile "com.google.android.gms:play-services-maps:$google_play_services_version"
+    implementation 'com.google.android.libraries.maps:maps:3.1.0-beta'
     compile "androidx.appcompat:appcompat:$androidx_version"
 
     compile project(':mapme')

@@ -18,7 +18,6 @@ ext {
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply from: '../publishing.gradle'
 
 android {
     compileSdkVersion compileSdk

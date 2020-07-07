@@ -11,7 +11,6 @@ buildscript {
         classpath "digital.wup:android-maven-publish:$android_maven_version"
     }
 }
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
