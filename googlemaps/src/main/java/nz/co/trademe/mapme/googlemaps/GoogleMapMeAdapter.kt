@@ -1,11 +1,9 @@
 package nz.co.trademe.mapme.googlemaps
 
 import android.content.Context
-import com.google.android.libraries.maps.GoogleMap
 import nz.co.trademe.mapme.MapMeAdapter
-import nz.co.trademe.mapme.annotations.MapAnnotation
-import nz.co.trademe.mapme.annotations.OnInfoWindowClickListener
+import org.m0skit0.android.mapswrapper.CommonMap
 
-abstract class GoogleMapMeAdapter(context: Context) : MapMeAdapter<GoogleMap>(context, GoogleMapAnnotationFactory()){
+abstract class GoogleMapMeAdapter(context: Context) : MapMeAdapter<CommonMap>(context, GoogleMapAnnotationFactory()) {
 }
 

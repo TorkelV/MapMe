@@ -3,21 +3,24 @@ package nz.co.trademe.mapme.sample.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
+
 import android.view.View;
 
-import com.google.android.libraries.maps.CameraUpdateFactory;
-import com.google.android.libraries.maps.GoogleMap;
-import com.google.android.libraries.maps.OnMapReadyCallback;
-import com.google.android.libraries.maps.SupportMapFragment;
-import com.google.android.libraries.maps.model.Marker;
+
+import org.m0skit0.android.mapswrapper.CameraUpdateFactory;
+import org.m0skit0.android.mapswrapper.CommonMap;
+import org.m0skit0.android.mapswrapper.LatLng;
+import org.m0skit0.android.mapswrapper.Marker;
+import org.m0skit0.android.mapswrapper.OnMapReadyCallback;
+import org.m0skit0.android.mapswrapper.SupportMapFragment;
 
 import nz.co.trademe.mapme.googlemaps.GoogleMapAnnotationFactory;
-import nz.co.trademe.mapme.googlemaps.GoogleMapUtils;
 import nz.co.trademe.mapme.sample.R;
 
 public class GoogleMapsActivity extends MapActivity
-        implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+        implements OnMapReadyCallback, CommonMap.OnMarkerClickListener {
 
     public static void start(@NonNull Context context) {
         Intent intent = new Intent(context, GoogleMapsActivity.class);
@@ -36,13 +39,13 @@ public class GoogleMapsActivity extends MapActivity
 
     @Override
     View getMapView() {
-        return ((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map)).getView();
+        return ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getView();
     }
 
     @Override
-    public void onMapReady(GoogleMap map) {
+    public void onMapReady(CommonMap map) {
         onMapReady(new GoogleMapAnnotationFactory(), map);
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(GoogleMapUtils.toGoogleMapsLatLng(aucklandLatLng), 14));
+        map.moveCamera(CameraUpdateFactory.INSTANCE.newLatLngZoom(new LatLng(aucklandLatLng.getLatitude(), aucklandLatLng.getLongitude()), 14));
     }
 
     @Override

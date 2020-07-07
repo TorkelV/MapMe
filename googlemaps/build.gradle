@@ -49,7 +49,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.google.android.libraries.maps:maps:3.1.0-beta'
+    implementation 'com.github.torkelv:maps-wrapper:1.0-beta-4'
     compile "androidx.appcompat:appcompat:$androidx_version"
 
     compile project(':mapme')

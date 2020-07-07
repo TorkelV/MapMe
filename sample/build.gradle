@@ -76,7 +76,7 @@ dependencies {
     compile "androidx.appcompat:appcompat:$androidx_version"
     compile "com.google.android.material:material:$androidx_version"
 
-    implementation 'com.google.android.libraries.maps:maps:3.1.0-beta'
+    implementation 'com.github.torkelv:maps-wrapper:1.0-beta-4'
 
     compile 'com.mapbox.mapboxsdk:mapbox-android-services:2.2.3'
 
